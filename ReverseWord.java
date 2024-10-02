@@ -33,7 +33,7 @@ public class ReverseWord {
     public static String reverseWordCharacters(String str) {
         // Разбиваем строку на слова по пробелам между ними то массив будет таким: ["Azure", "is", "the", "best", "IT", "company!"]
         String[] words = str.split(" ");
-        //Создаём StringBuilder для итогового результата. Этот объект будет хранить перевёрнутые слова и помогать собирать финальную строку.
+        //Создаём StringBuilder для итогового результата - предложения. Этот объект будет хранить перевёрнутые слова и помогать собирать финальную строку.
         StringBuilder reversedSentence = new StringBuilder();
 
         // Перебираем все слова и разворачиваем символы в каждом слове
@@ -41,15 +41,15 @@ public class ReverseWord {
             // Разворачиваем символы в текущем слове
             //Создаём StringBuilder из текущего слова. Например, если слово — "Azure", то создаётся объект StringBuilder, содержащий "Azure".
             StringBuilder reversedWord = new StringBuilder(word);
-            //Добавляем перевёрнутое слово к итоговой строке.
+            //Добавляем перевёрнутое слово к итоговой строке через append. 
             // После каждого перевёрнутого слова добавляется пробел, чтобы сохранить разделение между словами.
-            reversedSentence.append(reversedWord.reverse().toString()).append(" ");
+            reversedSentence.append(reversedWord.reverse()).append(" ");
         }
 
         // Возвращаем строку, удаляя последний пробел
         return reversedSentence.toString().trim();
     }
-    
+
     /*
     Метод reverseWordCharacters:
 
