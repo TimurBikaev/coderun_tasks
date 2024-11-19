@@ -36,3 +36,18 @@ while (indexLastChar > indexFirstChar) { //пока индекс последн�
 }
 return true;
 }
+
+
+  //А ВООБЩЕ САМЫЙ ПРОСТОЙ МЕТОД, НО НЕ БЫСТРЫЙ ПРИ ДЛИННОЙ СТРОКЕ - reverse строки и проверка на equals 
+
+    String text = "madam"; // пример строки для проверки
+        if (isPalindrome(text)) {
+            System.out.println("Строка является палиндромом");
+        } else {
+            System.out.println("Строка не является палиндромом");
+        }
+    }
+    private static boolean isPalindrome(String text) {
+        StringBuilder reversedText = new StringBuilder(text).reverse();
+        return text.equals(reversedText.toString());
+    }
