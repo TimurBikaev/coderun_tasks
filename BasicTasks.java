@@ -152,6 +152,23 @@ public class Main {
 
         }
 
+   @Test
+    //сумма четных чисел от 0 до 10
+    void sumOfOdd () {
+        int sum = 0;
+        for (int i = 0; i < 10; i++) {
+            if(i % 2 != 0)
+            {
+                System.out.println(i + " - нечетное, пропускаем через continue");
+                continue;
+            }
+            sum+=i;
+            System.out.println(sum);
+        }
+    }
+
+        
+
 
     }
 
